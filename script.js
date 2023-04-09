@@ -59,4 +59,8 @@ function enviarMensaje() {
     // Reemplaza "correo_destinatario" con la dirección de correo electrónico a la que deseas enviar el mensaje
     window.location.href = "mailto:pierocr@gmail.com?subject=" + tema + "&body=" + cuerpoMensaje;
   }
+
+
+
+
   
