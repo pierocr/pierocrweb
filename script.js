@@ -40,6 +40,27 @@ window.onscroll = function(){
     efectoHabilidades();
 } 
 
+function validarFormulario() {
+    // Obtener los valores de los campos
+    const nombre = document.getElementById("nombre").value;
+    const telefono = document.getElementById("telefono").value;
+    const correo = document.getElementById("correo").value;
+    const tema = document.getElementById("tema").value;
+    const mensaje = document.getElementById("mensaje").value;
+
+    // Verificar que todos los campos obligatorios tengan valor
+    if (!nombre || !telefono || !correo || !tema || !mensaje) {
+        alert("Todos los campos son obligatorios");
+        return;
+    }
+
+    // Si todos los campos tienen valor, enviar el formulario
+    enviarMensaje();
+
+    // Si todos los campos tienen valor, enviar el formulario
+    // Aquí puedes agregar la lógica para enviar el formulario
+}
+
 function enviarMensaje() {
     // Obtiene los valores de los campos de entrada
     var nombre = document.getElementById("nombre").value;
@@ -59,8 +80,6 @@ function enviarMensaje() {
     // Reemplaza "correo_destinatario" con la dirección de correo electrónico a la que deseas enviar el mensaje
     window.location.href = "mailto:pierocr@gmail.com?subject=" + tema + "&body=" + cuerpoMensaje;
   }
-
-
 
 
   
